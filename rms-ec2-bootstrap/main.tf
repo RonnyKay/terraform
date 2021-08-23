@@ -10,9 +10,7 @@ resource "aws_ssm_parameter" "foo" {
   value = "bar12"
 
   tags = {
-    APPID = "test"
-    APPLICATION_OWNER = "hghg"
-    APPLICATION_NAME = "dnfgd"
+    "APPID" = "test"
   }
 }
 

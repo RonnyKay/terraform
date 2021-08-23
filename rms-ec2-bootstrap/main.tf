@@ -11,6 +11,7 @@ resource "aws_ssm_parameter" "foo" {
 
   tags = {
     "APPID" = "test"
+    "APPLICATION_OWNER" = "hghg"
   }
 }
 

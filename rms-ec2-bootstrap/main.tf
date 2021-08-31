@@ -9,18 +9,14 @@ resource "aws_ssm_parameter" "foo" {
   type  = "String"
   value = "bar12"
 
-  tags = {
-    "APPID" = "test"
-    "APPLICATION_OWNER" = "hghg"
-    "APPLICATION_NAME" = "dnfgd"
-  }
+  tags = merge(local.customTags)
 }
 
 
-# locals {
-#   customTags = {
-#     "APPID" = "test",
-#     "APPLICATION OWNER" = "hghg",
-#     "APPLICATION NAME" = "dnfgd"
-#   }
-# }
+locals {
+  customTags = {
+     "APPID" = "test",
+     "APPLICATION-OWNER" = "hghg",
+     "APPLICATION-NAME" = "dnfgd"
+   }
+ }
